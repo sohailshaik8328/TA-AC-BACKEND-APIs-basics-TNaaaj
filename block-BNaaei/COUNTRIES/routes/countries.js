@@ -1,8 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var Countries = require('../models/countries');
-/* GET home page. */
-//add a country details
+
 router.post('/', function (req, res, next) {
   req.body.ethnicity = req.body.ethnicity.trim().split(',');
   Countries.create(req.body, (err, country) => {
