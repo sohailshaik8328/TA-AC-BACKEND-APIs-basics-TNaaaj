@@ -20,6 +20,9 @@ router.post('/:id/states', (req, res, next) => {
 });
 
 //list all states
+
+
+
 router.get('/:id/states', (req, res, next) => {
   let id = req.params.id;
   Countries.findById(id)
